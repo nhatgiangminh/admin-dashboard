@@ -1,0 +1,60 @@
+.widget {
+  flex: 1;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 9px 28px -1px rgba(0,0,0,0.1);
+  .left, .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #999;
+    }
+    .counter {
+      font-size: 24px;
+      font-weight: 400;
+    }
+    .link {
+      font-size: 12px;
+      width: max-content;
+      border-bottom: 0.5px solid #333;
+    }
+    .percentage {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+
+      &.positive {
+        color: green;
+      }
+      &.negative {
+        color: red;
+      }
+    }
+    .widget-icon {
+      align-self: flex-end;
+      padding: 5px;
+      border-radius: 10px;
+      &.user-icon {
+        background-color: rgba(220, 20, 60, 0.278);
+        color: crimson
+      }
+      &.order-icon {
+        background-color: rgb(74, 74, 19);
+        color: yellow
+      }
+      &.earning-icon {
+        background-color: rgba(144, 238, 144, 0.258);
+        color: green;
+      }
+      &.balance-icon {
+        background-color: rgba(128, 0, 128, 0.229);
+      }
+    }
+  }
+}
