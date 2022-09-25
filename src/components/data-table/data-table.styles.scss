@@ -1,0 +1,62 @@
+.data-table {
+  height: 600px;
+  padding: 20px;
+  .user-image{
+    display: flex;
+    align-items: center;
+    img{
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      margin: 20px;
+      object-fit: cover;
+    }
+  }
+  .status {
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 20px;
+    &.active {
+      color: green;
+      background-color: rgba(3, 191, 3, 0.291);
+    }
+    &.offline {
+      color: rgb(234, 234, 5);
+      background-color: rgba(104, 104, 0, 0.593);
+    }
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    .view-btn {
+      border: 1px dotted rgba(0, 0, 139, 0.587);
+      color: darkblue;
+      border-radius: 5px;
+      padding: 2px 5px;
+      background-color: white;
+    }
+    .remove-btn {
+      border: 1px dotted rgba(139, 0, 0, 0.566);
+      color: darkred;
+      border-radius: 5px;
+      padding: 2px 5px;
+      background-color: white;
+    }
+    button {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .nav-link {
+    width: 100%;
+    margin-bottom: 10px;
+    .add-new {
+      border: 0.5px solid green;
+      padding: 5px;
+      width: max-content;
+      color: green;
+    }
+  }
+}

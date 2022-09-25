@@ -1,0 +1,15 @@
+.info-detail {
+  color: gray;
+  margin-bottom: 5px;
+  display: flex;
+  gap: 5px;
+  .info-key {
+    font-weight: 600;
+    font-size: 16px;
+
+  }
+  .info-value {
+    font-size: 14px;
+    font-weight: 300;
+  }
+}

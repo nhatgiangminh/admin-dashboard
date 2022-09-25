@@ -1,0 +1,58 @@
+.single {
+  display: flex;
+  width: 100%;
+  .single-container {
+    flex:6;
+    .top {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+      .left {
+        flex: 1;
+        position: relative;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 9px 28px -1px rgba(0,0,0,0.1);
+        .item {
+          display: flex;
+          gap: 20px;
+          img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .item-detail {
+            display: flex;
+            flex-direction: column;
+            h2 {
+              margin: 0px;
+            }
+          }
+        }
+        .edit-btn {
+          position: absolute;
+          top:0;
+          right: 0;
+          background-color: rgba(166, 117, 250, 0.196);
+          color:rgb(166, 117, 250);
+          border: none;
+          border-radius: 0px 5px 0px 0px;
+          &:hover {
+            cursor: pointer;
+            background-color: rgba(128, 0, 128, 0.244);
+          }
+        }
+      }
+      .right {
+        flex: 2;
+      }
+    }
+    h3 {
+      color: gray;
+    }
+    .bottom {
+      padding: 20px;
+    }
+  }
+}

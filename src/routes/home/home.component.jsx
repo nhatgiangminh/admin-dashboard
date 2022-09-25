@@ -3,6 +3,7 @@ import NavBar from '../../components/navbar/navbar.component';
 import Widget, { WIDGET_TYPES } from '../../components/widget/widget.component';
 import Featured from '../../components/featured/featured.component';
 import Chart from '../../components/chart/chart.component';
+import CustomTable from '../../components/custom-table/custom-table.component';
 import './home.styles.scss';
 
 const Home = () => {
@@ -19,7 +20,10 @@ const Home = () => {
         </div>
         <div className='charts'>
           <Featured />
-          <Chart />
+          <Chart aspect={2 / 1} title={'Last 6 Months Revenue'} />
+        </div>
+        <div className='list-container'>
+          <CustomTable />
         </div>
       </div>
     </div>

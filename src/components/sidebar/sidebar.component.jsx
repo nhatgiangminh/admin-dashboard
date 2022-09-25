@@ -10,25 +10,32 @@ import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
-
+import { Link } from 'react-router-dom';
 const SideBar = () => {
   return (
     <div className='sidebar-container'>
       <div className='top'>
-        <span className='logo'>NhatGM</span>
+        <Link to={'/'}>
+          <span className='logo'>NhatGM</span>
+        </Link>
       </div>
       <div className='center'>
         <ul>
           <p className='title'>MAIN</p>
-          <li>
-            <DashboardIcon className='icon' />
-            <span>Dashboard</span>
-          </li>
+          <Link to={'/'}>
+            <li>
+              <DashboardIcon className='icon' />
+
+              <span>Dashboard</span>
+            </li>
+          </Link>
           <p className='title'>LISTS</p>
-          <li>
-            <PersonOutlineOutlinedIcon className='icon' />
-            <span>Users</span>
-          </li>
+          <Link to={'/users'}>
+            <li>
+              <PersonOutlineOutlinedIcon className='icon' />
+              <span>Users</span>
+            </li>
+          </Link>
           <li>
             <StoreIcon className='icon' />
             <span>Products</span>

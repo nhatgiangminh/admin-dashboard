@@ -1,0 +1,16 @@
+.user-input {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 10px;
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-bottom:1px solid black;
+  }
+  label {
+    color: gray
+  }
+}
