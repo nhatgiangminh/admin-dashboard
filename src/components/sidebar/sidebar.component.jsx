@@ -11,7 +11,17 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { ThemeContext } from '../../context/theme/theme.context';
+
 const SideBar = () => {
+  const { darkMode, setDarkMode } = useContext(ThemeContext);
+  const lightModeHandle = () => {
+    setDarkMode(false);
+  };
+  const darkModeHandle = () => {
+    setDarkMode(true);
+  };
   return (
     <div className='sidebar-container'>
       <div className='top'>
@@ -78,8 +88,8 @@ const SideBar = () => {
         </ul>
       </div>
       <div className='bottom'>
-        <div className='theme-option' />
-        <div className='theme-option' />
+        <div onClick={lightModeHandle} className='theme-option' />
+        <div onClick={darkModeHandle} className='theme-option' />
       </div>
     </div>
   );

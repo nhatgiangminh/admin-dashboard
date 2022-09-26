@@ -7,8 +7,15 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
 import avatar from '../../assets/avatar.jpeg';
+import { useContext } from 'react';
+import { ThemeContext } from '../../context/theme/theme.context';
 
 const NavBar = () => {
+  const { darkMode, setDarkMode } = useContext(ThemeContext);
+  const handleChange = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <div className='navbar-container'>
       <div className='wrapper'>
@@ -22,7 +29,7 @@ const NavBar = () => {
             <span>English</span>
           </div>
           <div className='item'>
-            <DarkModeOutlinedIcon className='icon' />
+            <DarkModeOutlinedIcon className='icon' onClick={handleChange} />
           </div>
           <div className='item'>
             <FullscreenExitOutlinedIcon className='icon' />
